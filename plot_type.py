@@ -63,7 +63,7 @@ def _lancer_chat():
             prompt = input(">> ")
             if prompt.strip().lower() in ["exit", "quit"]:
                 break
-            response = requests.post("http://176.170.91.53:5000/ask", json={"message": prompt})
+            response = requests.post("http://172.31.29.76:5000/ask", json={"message": prompt})
             reponse = response.json().get("response", "[Erreur de réponse]")
             print(">>>>>>", reponse)
     except Exception as e:
